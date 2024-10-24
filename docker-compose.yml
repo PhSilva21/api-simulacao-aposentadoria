@@ -1,0 +1,16 @@
+version: '3'
+services:
+  beneficios-db:
+    image: mysql:latest
+    container_name: "beneficios-db"
+    restart: always
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./data-beneficios:/var/lib/mysql]
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: beneficios
+
+volumes:
+  data-beneficios:
